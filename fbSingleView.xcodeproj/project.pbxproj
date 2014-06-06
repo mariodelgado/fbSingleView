@@ -11,6 +11,8 @@
 		FEE8764E19417974003B827A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8764D19417974003B827A /* AppDelegate.m */; };
 		FEE8765019417974003B827A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE8764F19417974003B827A /* Images.xcassets */; };
 		FEE8765C19417974003B827A /* fbSingleViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8765B19417974003B827A /* fbSingleViewTests.m */; };
+		FEE8766819417A59003B827A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8766619417A59003B827A /* MainViewController.m */; };
+		FEE8766919417A59003B827A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEE8766719417A59003B827A /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,9 @@
 		FEE8765519417974003B827A /* fbSingleViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fbSingleViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE8765A19417974003B827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE8765B19417974003B827A /* fbSingleViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fbSingleViewTests.m; sourceTree = "<group>"; };
+		FEE8766519417A59003B827A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FEE8766619417A59003B827A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FEE8766719417A59003B827A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,9 @@
 				FEE8764D19417974003B827A /* AppDelegate.m */,
 				FEE8764F19417974003B827A /* Images.xcassets */,
 				FEE8764819417974003B827A /* Supporting Files */,
+				FEE8766519417A59003B827A /* MainViewController.h */,
+				FEE8766619417A59003B827A /* MainViewController.m */,
+				FEE8766719417A59003B827A /* MainViewController.xib */,
 			);
 			path = fbSingleView;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE8765019417974003B827A /* Images.xcassets in Resources */,
+				FEE8766919417A59003B827A /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE8764E19417974003B827A /* AppDelegate.m in Sources */,
+				FEE8766819417A59003B827A /* MainViewController.m in Sources */,
 				FEE8764B19417974003B827A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +352,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = fbSingleViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +369,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = fbSingleViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +396,7 @@
 				FEE8766119417974003B827A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEE8766219417974003B827A /* Build configuration list for PBXNativeTarget "fbSingleViewTests" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +405,7 @@
 				FEE8766419417974003B827A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
