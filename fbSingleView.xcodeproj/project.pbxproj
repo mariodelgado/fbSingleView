@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEE8764B19417974003B827A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8764A19417974003B827A /* main.m */; };
+		FEE8764E19417974003B827A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8764D19417974003B827A /* AppDelegate.m */; };
+		FEE8765019417974003B827A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE8764F19417974003B827A /* Images.xcassets */; };
+		FEE8765C19417974003B827A /* fbSingleViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8765B19417974003B827A /* fbSingleViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEE8765619417974003B827A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE8763D19417974003B827A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEE8764419417974003B827A;
+			remoteInfo = fbSingleView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FEE8764519417974003B827A /* fbSingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbSingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE8764919417974003B827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE8764A19417974003B827A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEE8764C19417974003B827A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FEE8764D19417974003B827A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FEE8764F19417974003B827A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FEE8765519417974003B827A /* fbSingleViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fbSingleViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE8765A19417974003B827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE8765B19417974003B827A /* fbSingleViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fbSingleViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEE8764219417974003B827A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE8765219417974003B827A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEE8763C19417974003B827A = {
+			isa = PBXGroup;
+			children = (
+				FEE8764719417974003B827A /* fbSingleView */,
+				FEE8765819417974003B827A /* fbSingleViewTests */,
+				FEE8764619417974003B827A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEE8764619417974003B827A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE8764519417974003B827A /* fbSingleView.app */,
+				FEE8765519417974003B827A /* fbSingleViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEE8764719417974003B827A /* fbSingleView */ = {
+			isa = PBXGroup;
+			children = (
+				FEE8764C19417974003B827A /* AppDelegate.h */,
+				FEE8764D19417974003B827A /* AppDelegate.m */,
+				FEE8764F19417974003B827A /* Images.xcassets */,
+				FEE8764819417974003B827A /* Supporting Files */,
+			);
+			path = fbSingleView;
+			sourceTree = "<group>";
+		};
+		FEE8764819417974003B827A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE8764919417974003B827A /* Info.plist */,
+				FEE8764A19417974003B827A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEE8765819417974003B827A /* fbSingleViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEE8765B19417974003B827A /* fbSingleViewTests.m */,
+				FEE8765919417974003B827A /* Supporting Files */,
+			);
+			path = fbSingleViewTests;
+			sourceTree = "<group>";
+		};
+		FEE8765919417974003B827A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEE8765A19417974003B827A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEE8764419417974003B827A /* fbSingleView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE8765F19417974003B827A /* Build configuration list for PBXNativeTarget "fbSingleView" */;
+			buildPhases = (
+				FEE8764119417974003B827A /* Sources */,
+				FEE8764219417974003B827A /* Frameworks */,
+				FEE8764319417974003B827A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fbSingleView;
+			productName = fbSingleView;
+			productReference = FEE8764519417974003B827A /* fbSingleView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEE8765419417974003B827A /* fbSingleViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEE8766219417974003B827A /* Build configuration list for PBXNativeTarget "fbSingleViewTests" */;
+			buildPhases = (
+				FEE8765119417974003B827A /* Sources */,
+				FEE8765219417974003B827A /* Frameworks */,
+				FEE8765319417974003B827A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEE8765719417974003B827A /* PBXTargetDependency */,
+			);
+			name = fbSingleViewTests;
+			productName = fbSingleViewTests;
+			productReference = FEE8765519417974003B827A /* fbSingleViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEE8763D19417974003B827A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Mario C. Delgado Jr.";
+				TargetAttributes = {
+					FEE8764419417974003B827A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					FEE8765419417974003B827A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = FEE8764419417974003B827A;
+					};
+				};
+			};
+			buildConfigurationList = FEE8764019417974003B827A /* Build configuration list for PBXProject "fbSingleView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FEE8763C19417974003B827A;
+			productRefGroup = FEE8764619417974003B827A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEE8764419417974003B827A /* fbSingleView */,
+				FEE8765419417974003B827A /* fbSingleViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEE8764319417974003B827A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE8765019417974003B827A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE8765319417974003B827A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEE8764119417974003B827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE8764E19417974003B827A /* AppDelegate.m in Sources */,
+				FEE8764B19417974003B827A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE8765119417974003B827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE8765C19417974003B827A /* fbSingleViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEE8765719417974003B827A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEE8764419417974003B827A /* fbSingleView */;
+			targetProxy = FEE8765619417974003B827A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FEE8765D19417974003B827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FEE8765E19417974003B827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEE8766019417974003B827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = fbSingleView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FEE8766119417974003B827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = fbSingleView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FEE8766319417974003B827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fbSingleView.app/fbSingleView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fbSingleViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		FEE8766419417974003B827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fbSingleView.app/fbSingleView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = fbSingleViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEE8764019417974003B827A /* Build configuration list for PBXProject "fbSingleView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE8765D19417974003B827A /* Debug */,
+				FEE8765E19417974003B827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEE8765F19417974003B827A /* Build configuration list for PBXNativeTarget "fbSingleView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE8766019417974003B827A /* Debug */,
+				FEE8766119417974003B827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FEE8766219417974003B827A /* Build configuration list for PBXNativeTarget "fbSingleViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEE8766319417974003B827A /* Debug */,
+				FEE8766419417974003B827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEE8763D19417974003B827A /* Project object */;
+}
