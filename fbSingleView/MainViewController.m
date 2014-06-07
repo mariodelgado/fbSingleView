@@ -10,6 +10,7 @@
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIView *fbView;
+@property (weak, nonatomic) IBOutlet UIView *viewbg;
 
 @end
 
@@ -34,6 +35,9 @@
     self.fbView.layer.cornerRadius = 5;
     self.navigationItem.title = @"Post";
 
+    self.viewbg.layer.cornerRadius = 3;
+    self.viewbg.layer.borderColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
+    self.viewbg.layer.borderWidth = 1;
     
     
 }

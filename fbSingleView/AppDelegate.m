@@ -26,7 +26,7 @@
     self.window.rootViewController = vc;
     
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+ UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
  
     
     self.window.rootViewController = navigationController;
@@ -42,6 +42,16 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     navigationController.navigationBar.barStyle = UIBarStyleBlack;
+     
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    self.window.rootViewController = tabBarController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    tabBarController.viewControllers = @[navigationController];
+    
+    
 
     
 
