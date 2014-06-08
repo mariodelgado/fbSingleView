@@ -30,12 +30,21 @@
  
     
     self.window.rootViewController = navigationController;
-    navigationController.navigationBar.barTintColor = [UIColor colorWithRed:59.0f/255.0f
+    /*navigationController.navigationBar.barTintColor = [UIColor colorWithRed:59.0f/255.0f
                                                                       green:89.0f/255.0f
                                                                        blue:152.0f/255.0f
                                                                       alpha:1.0f];
     navigationController.navigationBar.translucent = NO;
     navigationController.navigationBar.tintColor = [UIColor whiteColor];
+     
+     */
+    
+    
+    [navigationController.navigationBar
+     setBackgroundImage:[UIImage imageNamed:@"navbar.png"]
+     forBarMetrics:UIBarMetricsDefault];
+    
+
     
     [navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 
@@ -50,6 +59,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     tabBarController.viewControllers = @[navigationController];
+    
+    [tabBarController.tabBar
+     setBackgroundImage:[UIImage imageNamed:@"tabbar.png"]];
+    tabBarController.tabBar.translucent = NO;
     
     
 

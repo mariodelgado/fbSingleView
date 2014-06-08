@@ -11,6 +11,7 @@
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIView *fbView;
 @property (weak, nonatomic) IBOutlet UIView *viewbg;
+@property (weak, nonatomic) IBOutlet UIView *textView;
 
 @end
 
@@ -28,17 +29,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    
+        
+
 
     self.fbView.layer.cornerRadius = 5;
     self.navigationItem.title = @"Post";
 
     self.viewbg.layer.cornerRadius = 3;
-    self.viewbg.layer.borderColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
-    self.viewbg.layer.borderWidth = 1;
-    
+    self.viewbg.layer.shadowColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
+    self.viewbg.layer.shadowOffset = CGSizeMake(0, 0);
+    self.viewbg.layer.shadowOpacity = 0.8;
+    self.viewbg.layer.shadowRadius = 1;
+    self.textView.layer.borderColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
+    self.textView.layer.borderWidth = 1;
     
 }
 
@@ -51,6 +54,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)shareAction:(id)sender
+{
+    NSArray *activityItems = nil;
+    
+
+    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 /*

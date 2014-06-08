@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="fbView" destination="i5M-Pr-FkT" id="Q9z-O9-g9N"/>
+                <outlet property="textView" destination="HIU-0e-25M" id="5iO-Ki-pmi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewbg" destination="s82-96-QE3" id="WPb-b4-bCl"/>
             </connections>
@@ -18,20 +18,137 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s82-96-QE3">
-                    <rect key="frame" x="15" y="72" width="290" height="551"/>
+                    <rect key="frame" x="12" y="71" width="296" height="497"/>
+                    <subviews>
+                        <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_bg_rpt" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-6I-hKc">
+                            <rect key="frame" x="0.0" y="332" width="290" height="41"/>
+                        </imageView>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5p-tc-gx9">
+                            <rect key="frame" x="11" y="333" width="72" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <state key="normal" title="  Like" image="like_btn">
+                                <color key="titleColor" red="0.47450980392156861" green="0.48627450980392156" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="like_btn_selected">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16d-uy-owV">
+                            <rect key="frame" x="96" y="333" width="89" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <state key="normal" title="  Comment" image="comment_btn">
+                                <color key="titleColor" red="0.47450980390000003" green="0.48627450979999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="comment_btn"/>
+                        </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-to-tWM">
+                            <rect key="frame" x="208" y="329" width="64" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="-3"/>
+                            <state key="normal" title="  Share" image="share">
+                                <color key="titleColor" red="0.54861479997634888" green="0.56072026491165161" blue="0.56901144981384277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="share-selected">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="FHg-Tn-dIg">
+                            <rect key="frame" x="11" y="11" width="40" height="40"/>
+                        </imageView>
+                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0b-J4-c0I">
+                            <rect key="frame" x="59" y="11" width="28" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="February 1 at 11:00 AM  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N38-gt-LE9">
+                            <rect key="frame" x="59" y="30" width="190" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" red="0.54690331220626831" green="0.5470007061958313" blue="0.54689717292785645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260.5" translatesAutoresizingMaskIntoConstraints="NO" id="znZ-la-1pt">
+                            <rect key="frame" x="11" y="59" width="260.5" height="71"/>
+                            <attributedString key="attributedText">
+                                <fragment content="From collarless shirts to high-waisted pants, ">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="#Her">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="'s costume designer, Casey Storm, explains how he created his fashion looks for the future: ">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="http://bit.ly/ijV9zM8">
+                                    <attributes>
+                                        <color key="NSColor" red="0.22537201642990112" green="0.34264653921127319" blue="0.60412263870239258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView appearanceType="aqua" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_image" translatesAutoresizingMaskIntoConstraints="NO" id="uYy-dy-6mg">
+                            <rect key="frame" x="-7" y="138" width="310" height="181"/>
+                        </imageView>
+                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a97-1z-NLb">
+                            <rect key="frame" x="11" y="383" width="156" height="21"/>
+                            <attributedString key="attributedText">
+                                <fragment content="1,675 people ">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="like this.">
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <tabBar appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PDP-5Q-Sv6">
-                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <items>
-                        <tabBarItem title="News Feed" id="sh7-4P-NHo"/>
-                        <tabBarItem title="Requests" id="Q8t-4v-GMo"/>
-                        <tabBarItem title="Messages" id="2Fy-nW-jVk"/>
-                        <tabBarItem title="Notifications" id="wnz-1W-do8"/>
-                        <tabBarItem systemItem="more" id="NyU-S8-7If"/>
-                    </items>
-                </tabBar>
+                <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-0e-25M">
+                    <rect key="frame" x="0.0" y="477" width="320" height="43"/>
+                    <subviews>
+                        <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="14" background="textfieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ich-Gq-Xv7">
+                            <rect key="frame" x="17" y="7" width="241" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-NH-tAR">
+                            <rect key="frame" x="266" y="7" width="46" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="Post">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.91348445415496826" green="0.91749966144561768" blue="0.92982614040374756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,4 +156,15 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="bar_bg_rpt" width="1" height="41"/>
+        <image name="comment_btn" width="17" height="40"/>
+        <image name="her_image" width="2048" height="1152"/>
+        <image name="her_profile_image" width="50" height="50"/>
+        <image name="like_btn" width="17" height="40"/>
+        <image name="like_btn_selected" width="17" height="40"/>
+        <image name="share" width="17" height="40"/>
+        <image name="share-selected" width="17" height="40"/>
+        <image name="textfieldBackground" width="47" height="32"/>
+    </resources>
 </document>
