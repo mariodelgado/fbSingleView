@@ -6,7 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="activeField" destination="ich-Gq-Xv7" id="3se-lQ-27F"/>
                 <outlet property="fbView" destination="i5M-Pr-FkT" id="Q9z-O9-g9N"/>
+                <outlet property="postButton" destination="tG4-NH-tAR" id="xA9-dC-Swz"/>
+                <outlet property="scrollView" destination="psS-tz-DfZ" id="UiZ-Fd-HGM"/>
                 <outlet property="textView" destination="HIU-0e-25M" id="5iO-Ki-pmi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewbg" destination="s82-96-QE3" id="WPb-b4-bCl"/>
@@ -20,41 +23,6 @@
                 <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s82-96-QE3">
                     <rect key="frame" x="12" y="71" width="296" height="497"/>
                     <subviews>
-                        <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_bg_rpt" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-6I-hKc">
-                            <rect key="frame" x="0.0" y="332" width="290" height="41"/>
-                        </imageView>
-                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5p-tc-gx9">
-                            <rect key="frame" x="11" y="333" width="72" height="40"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                            <state key="normal" title="  Like" image="like_btn">
-                                <color key="titleColor" red="0.47450980392156861" green="0.48627450980392156" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted" image="like_btn_selected">
-                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                        </button>
-                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16d-uy-owV">
-                            <rect key="frame" x="96" y="333" width="89" height="40"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                            <state key="normal" title="  Comment" image="comment_btn">
-                                <color key="titleColor" red="0.47450980390000003" green="0.48627450979999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted" image="comment_btn"/>
-                        </button>
-                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-to-tWM">
-                            <rect key="frame" x="208" y="329" width="64" height="40"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="-3"/>
-                            <state key="normal" title="  Share" image="share">
-                                <color key="titleColor" red="0.54861479997634888" green="0.56072026491165161" blue="0.56901144981384277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted" image="share-selected">
-                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                        </button>
                         <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="FHg-Tn-dIg">
                             <rect key="frame" x="11" y="11" width="40" height="40"/>
                         </imageView>
@@ -130,25 +98,68 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-0e-25M">
-                    <rect key="frame" x="0.0" y="477" width="320" height="43"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psS-tz-DfZ">
+                    <rect key="frame" x="0.0" y="-6" width="320" height="580"/>
                     <subviews>
-                        <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="14" background="textfieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ich-Gq-Xv7">
-                            <rect key="frame" x="17" y="7" width="241" height="30"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-NH-tAR">
-                            <rect key="frame" x="266" y="7" width="46" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <state key="normal" title="Post">
-                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_bg_rpt" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-6I-hKc">
+                            <rect key="frame" x="12" y="409" width="296" height="41"/>
+                        </imageView>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5p-tc-gx9">
+                            <rect key="frame" x="20" y="410" width="72" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <state key="normal" title="  Like" image="like_btn">
+                                <color key="titleColor" red="0.47450980392156861" green="0.48627450980392156" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="like_btn_selected">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16d-uy-owV">
+                            <rect key="frame" x="111" y="410" width="89" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <state key="normal" title="  Comment" image="comment_btn">
+                                <color key="titleColor" red="0.47450980390000003" green="0.48627450979999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="comment_btn"/>
+                        </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-to-tWM">
+                            <rect key="frame" x="226" y="406" width="64" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="-3"/>
+                            <state key="normal" title="  Share" image="share">
+                                <color key="titleColor" red="0.54861479997634888" green="0.56072026491165161" blue="0.56901144981384277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="share-selected">
+                                <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-0e-25M">
+                            <rect key="frame" x="0.0" y="483" width="320" height="43"/>
+                            <subviews>
+                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="14" background="textfieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ich-Gq-Xv7">
+                                    <rect key="frame" x="7" y="7" width="241" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-NH-tAR">
+                                    <rect key="frame" x="263" y="7" width="46" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <state key="normal" title="Post">
+                                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelEditingForView:" destination="-1" eventType="touchUpInside" id="jAc-b2-VZ8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.91348445415496826" green="0.91749966144561768" blue="0.92982614040374756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
