@@ -7,8 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "TTTAttributedLabel.h"
 
-@interface MainViewController ()
+@interface MainViewController () <TTTAttributedLabelDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *fbView;
 @property (weak, nonatomic) IBOutlet UIView *viewbg;
@@ -16,6 +17,12 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *postButton;
 @property (weak, nonatomic) IBOutlet UITextField *activeField;
+
+@property (nonatomic, copy) NSString *fbDescription;
+
+@property (nonatomic, weak) IBOutlet UILabel *attrLabel;
+
+
 
 - (void)willShowKeyboard:(NSNotification *)notification;
 - (void)willHideKeyboard:(NSNotification *)notification;
@@ -38,6 +45,11 @@
     return self;
 }
 
+
+
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,7 +58,6 @@
 
     self.fbView.layer.cornerRadius = 5;
     self.navigationItem.title = @"Post";
-
     self.viewbg.layer.cornerRadius = 3;
     self.viewbg.layer.shadowColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
     self.viewbg.layer.shadowOffset = CGSizeMake(0, 0);
@@ -55,11 +66,69 @@
     self.textView.layer.borderColor = [UIColor colorWithRed:198/255.0f green:200/255.0f blue:204/255.0f alpha:1.0f].CGColor;
     self.textView.layer.borderWidth = 1;
     
+    
+    // Link properties -
+    UILabel *textLabel = self.attrLabel;
+    UIColor *linkColor = [UIColor colorWithRed:0.203 green:0.329 blue:0.835 alpha:1];
+    UIColor *linkActiveColor = [UIColor blackColor];
+    
+    // Detect links - Really wanted this to work, but for some reason it's not. :(
+    if ([textLabel isKindOfClass:[TTTAttributedLabel class]])
+    {
+        TTTAttributedLabel *label = (TTTAttributedLabel *)textLabel;
+        label.linkAttributes = @{NSForegroundColorAttributeName:linkColor,};
+        label.activeLinkAttributes = @{NSForegroundColorAttributeName:linkActiveColor,};
+        label.enabledTextCheckingTypes = NSTextCheckingTypeLink;
+        label.delegate = self;
+    }
 
     
     
     
-}
+    
+    
+    CGRect labelFrame = CGRectMake(25, 78, 280, 175);
+    TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:labelFrame];
+    label.font = [UIFont systemFontOfSize:13];
+    label.textColor = [UIColor blackColor];
+    label.numberOfLines = 4;
+    label.enabledTextCheckingTypes = NSTextCheckingTypeLink; // Automatically detect links when the label text is subsequently changed
+    
+
+ 
+    
+    NSString *text = @"From collarless shirts to high-waisted pants, #Her's costume designer, Casey Storm, explains how he created his fashion looks for the future: http://bit.ly/1jV9zM8";
+    [label setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^ NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+        NSRange boldRange = [[mutableAttributedString string] rangeOfString:@"#Her's" options:NSCaseInsensitiveSearch];
+        NSRange linkRange = [[mutableAttributedString string] rangeOfString:@"http://bit.ly/1jV9zM8" options:NSCaseInsensitiveSearch];
+        
+        // Core Text APIs use C functions without a direct bridge to UIFont. See Apple's "Core Text Programming Guide" to learn how to configure string attributes.
+        UIFont *boldSystemFont = [UIFont boldSystemFontOfSize:13];
+        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)boldSystemFont.fontName, boldSystemFont.pointSize, NULL);
+        if (font) {
+            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:boldRange];
+           
+            
+        // Remove Underline
+            
+          //  NSDictionary *linkAttributes = @{[NSNumber numberWithInt:kCTUnderlineStyleNone] : (id)kCTUnderlineStyleAttributeName};
+          //  label.linkAttributes = linkAttributes;
+            
+            
+            [label addLinkToURL:[NSURL URLWithString:@"http://bit.ly/1jV9zM8"] withRange:linkRange];
+            CFRelease(font);
+        }
+        
+        
+        
+        return mutableAttributedString;
+    }];
+    
+    [self.fbView addSubview:label];
+
+    
+    
+   }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -71,6 +140,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 - (IBAction)shareAction:(id)sender
 {
@@ -142,6 +213,13 @@
     [super touchesEnded:touches withEvent:event];
     [self.nextResponder touchesEnded:touches withEvent:event];
 }
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url
+{
+    // Open link in Safari
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 
 /*
 #pragma mark - Navigation

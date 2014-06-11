@@ -39,40 +39,6 @@
                             <color key="textColor" red="0.54690331220626831" green="0.5470007061958313" blue="0.54689717292785645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260.5" translatesAutoresizingMaskIntoConstraints="NO" id="znZ-la-1pt">
-                            <rect key="frame" x="11" y="59" width="260.5" height="71"/>
-                            <attributedString key="attributedText">
-                                <fragment content="From collarless shirts to high-waisted pants, ">
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="#Her">
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="13" name="HelveticaNeue-Bold"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="'s costume designer, Casey Storm, explains how he created his fashion looks for the future: ">
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="http://bit.ly/ijV9zM8">
-                                    <attributes>
-                                        <color key="NSColor" red="0.22537201642990112" green="0.34264653921127319" blue="0.60412263870239258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <imageView appearanceType="aqua" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_image" translatesAutoresizingMaskIntoConstraints="NO" id="uYy-dy-6mg">
                             <rect key="frame" x="-7" y="138" width="310" height="181"/>
                         </imageView>
@@ -100,7 +66,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psS-tz-DfZ">
-                    <rect key="frame" x="0.0" y="-6" width="320" height="580"/>
+                    <rect key="frame" x="0.0" y="-5" width="320" height="580"/>
                     <subviews>
                         <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_bg_rpt" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-6I-hKc">
                             <rect key="frame" x="12" y="409" width="296" height="41"/>
@@ -138,7 +104,7 @@
                             </state>
                         </button>
                         <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-0e-25M">
-                            <rect key="frame" x="0.0" y="483" width="320" height="43"/>
+                            <rect key="frame" x="0.0" y="481" width="320" height="43"/>
                             <subviews>
                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="14" background="textfieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ich-Gq-Xv7">
                                     <rect key="frame" x="7" y="7" width="241" height="30"/>
