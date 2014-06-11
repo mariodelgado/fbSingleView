@@ -91,12 +91,11 @@
     TTTAttributedLabel *label = [[TTTAttributedLabel alloc] initWithFrame:labelFrame];
     label.font = [UIFont systemFontOfSize:13];
     label.textColor = [UIColor blackColor];
-    label.numberOfLines = 4;
-    label.enabledTextCheckingTypes = NSTextCheckingTypeLink; // Automatically detect links when the label text is subsequently changed
-    
+    label.numberOfLines = 0;
+    label.enabledTextCheckingTypes = NSTextCheckingTypeLink;
 
  
-    
+    //from TTTAttribuitedLabel
     NSString *text = @"From collarless shirts to high-waisted pants, #Her's costume designer, Casey Storm, explains how he created his fashion looks for the future: http://bit.ly/1jV9zM8";
     [label setText:text afterInheritingLabelAttributesAndConfiguringWithBlock:^ NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
         NSRange boldRange = [[mutableAttributedString string] rangeOfString:@"#Her's" options:NSCaseInsensitiveSearch];
@@ -109,7 +108,7 @@
             [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:boldRange];
            
             
-        // Remove Underline
+        // Remove Underline??
             
           //  NSDictionary *linkAttributes = @{[NSNumber numberWithInt:kCTUnderlineStyleNone] : (id)kCTUnderlineStyleAttributeName};
           //  label.linkAttributes = linkAttributes;
